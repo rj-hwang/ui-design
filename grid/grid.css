@@ -1,0 +1,116 @@
+html {
+	height: 100%;
+}
+body {
+	font-family: "Microsoft YaHei";
+	font-size: 16px;
+	line-height: 1.5;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* 页面整体布局 */
+body>div {
+	position: absolute;
+	height: 100%;
+	box-sizing: border-box;
+}
+body>div.left {
+	width: 50%;
+	left: 0;
+}
+body>div.right {
+	width: 50%;
+	right: 0;
+	background-color: #F5F5F5;
+	border-left: 1px solid #E5E5EE;
+}
+
+/* Grid*/
+.grid{
+	position: relative;
+	overflow: hidden;
+}
+.grid .rowHeader{
+	width: 50px;
+}
+.grid>table>colgroup>col{
+	box-sizing: content-box;
+}
+.grid>table{
+	position: relative;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	margin: 0;
+	border-width: 0;
+	width: 0;
+	outline-width: 0;
+	max-width: none;
+	max-height: none;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.grid>table>thead>tr>th,.grid>table>tbody>tr>th,.grid>table>tbody>tr>td{
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	box-sizing: content-box;
+}
+.grid>table>thead>tr>th,.grid>table>tbody>tr>th{
+	text-align: center;
+	font-weight: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.grid>table>thead>tr>th>div,.grid>table>tbody>tr>th>div,.grid>table>tbody>tr>td>div{
+	position: relative;
+	padding: 0 4px 0 4px;
+}
+.grid>table>thead>tr>th,.grid>table>tbody>tr>th{
+	background-color: #EEE;
+}
+
+/*移动列宽的指引*/
+.grid>table>thead>tr>th>div>div{
+	position: absolute;
+	width: 4px;
+	cursor: col-resize;
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+.grid>table>thead>tr>th>div>div:hover{
+	background-color: #AAB;
+}
+
+
+/*滚动条*/
+.grid>.scroller{
+	position: absolute;
+	background-color: #F8F8F8;
+}
+.grid>.scroller.vertical{
+	top: 0;
+	right: 0;
+	bottom: 10px;
+	width: 10px;
+	border-left: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+.grid>.scroller.horizontal{
+	left: 0;
+	right: 10px;
+	bottom: 0;
+	height: 10px;
+	border-top: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+}
+

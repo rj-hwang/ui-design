@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Grid</title>
+  <link rel="stylesheet" media="screen" href="./grid.css">
+</head>
+<body>
+<div class="left">
+	<div class="grid" style="margin:10px;border: 1px solid blue;height:150px;width:450px;">
+		<table cellpadding="0">
+			<colgroup>
+				<col class="rowHeader">
+				<col style="width: 100px;">
+				<col style="width: 100px;">
+				<col style="width: 120px;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th></th>
+					<th><div><span>A</span><div></div></div></th>
+					<th><div><span>B长长长长长长长</span><div></div></div></th>
+					<th><div><span>C</span><div></div></div></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>1</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B内容B内容B</div></td>
+					<td><div>内容C</div></td>
+				</tr>
+				<tr>
+					<th>3</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
+				</tr>
+				<tr>
+					<th>4</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
+				</tr>
+				<tr>
+					<th>5</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
+				</tr>
+				<tr>
+					<th>6</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="scroller vertical"></div>
+		<div class="scroller horizontal"></div>
+	</div>
+
+</div>
+<div class="right">页面整体布局
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/template" id="grid-template">
+	<div class="grid">
+		<table>
+			<colgroup>
+				<col class="rowHeader">
+				<col style="width: 50px;">
+				<col style="width: 50px;">
+				<col style="width: 50px;">
+				<col style="width: 50px;">
+				<col style="width: 50px;">
+				<col style="width: 50px;">
+			</colgroup>
+			<thead>
+				<tr>
+					<th></th>
+					<th><div><span>A</span><div></div></div></th>
+					<th><div><span>B</span><div></div></div></th>
+					<th><div><span>C</span><div></div></div></th>
+				</tr>
+			</thead>
+
+		</table>
+	</div>
+</script>
+</body>
+</html>
