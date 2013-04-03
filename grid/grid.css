@@ -55,23 +55,26 @@ body>div.right {
 	outline-width: 0;
 	max-width: none;
 	max-height: none;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .grid>table>thead>tr>th,.grid>table>tbody>tr>th,.grid>table>tbody>tr>td{
 	border-right: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
-	box-sizing: content-box;
+	empty-cells: show;
 }
 .grid>table>thead>tr>th,.grid>table>tbody>tr>th{
 	text-align: center;
 	font-weight: normal;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
+/* 单元格的内容容器 */
 .grid>table>thead>tr>th>div,.grid>table>tbody>tr>th>div,.grid>table>tbody>tr>td>div{
+	height: 100%;
 	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	padding: 0 4px 0 4px;
 }
 .grid>table>thead>tr>th,.grid>table>tbody>tr>th{
@@ -79,7 +82,7 @@ body>div.right {
 }
 
 /*移动列宽的指引*/
-.grid>table>thead>tr>th>div>div{
+.grid>table>thead>tr>th>.resizer{
 	position: absolute;
 	width: 4px;
 	cursor: col-resize;
@@ -87,7 +90,7 @@ body>div.right {
 	top: 0;
 	right: 0;
 }
-.grid>table>thead>tr>th>div>div:hover{
+.grid>table>thead>tr>th>.resizer:hover{
 	background-color: #AAB;
 }
 
