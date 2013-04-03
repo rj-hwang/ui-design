@@ -1,0 +1,187 @@
+html {
+	height: 100%;
+}
+body {
+	font-family: "Microsoft YaHei";
+	font-size: 16px/1.5;
+	line-height: 1.5;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #666;
+}
+
+/* 页面整体布局 */
+body>div {
+	position: absolute;
+	height: 100%;
+	box-sizing: border-box;
+}
+body>div.left {
+	width: 50%;
+	left: 0;
+	padding: 1em;
+}
+body>div.right {
+	width: 50%;
+	right: 0;
+	background-color: #F5F5F5;
+	border-left: 1px solid #E5E5EE;
+	padding: 1em;
+}
+h2,h3,p {
+	margin: 0.25em;
+}
+
+/* ==通用样式开始== */
+.relative{
+	position: relative;
+}
+/* 水平对齐方式 */
+.align.left,.align.left>td{
+	text-align: left;
+}
+.align.center,.align.center>td{
+	text-align: center;
+}
+.align.right,.align.right>td{
+	text-align: right;
+}
+.align.justify,.align.justify>td{
+	text-align: justify;
+}
+/* 垂直对齐方式 */
+.align.top,.align.top>td{
+	vertical-align: top;
+}
+.align.middle,.align.middle>td{
+	vertical-align: middle;
+}
+.align.bottom,.align.bottom>td{
+	vertical-align: bottom;
+}
+/* 禁止文本溢自动换行，文字溢出就显示省略号 */
+.nowrap,.nowrap>th,.nowrap>td{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* 文本自动换行 */
+.autowrap,.autowrap>th,.autowrap>td{
+	white-space: normal;
+	overflow: auto;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+/* ==通用样式结束== */
+
+
+/* Grid*/
+.grid{
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+.grid *{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.grid>table{
+	table-layout: fixed;
+	width: 0;
+	outline-width: 0;
+	max-width: none;
+	max-height: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	border-width: 0;
+}
+/* 标题列：首行、首列 */
+.grid .column.first,.grid>table>thead>tr>*,.grid>table>tbody>tr>th{
+	width: 2.5em;
+	position: relative;
+	background-color: #EEE;
+	padding: 0 0.25em 0 0.25em;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	empty-cells: show;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: bottom;
+	cursor: default;
+	-webkit-user-select: none;
+}
+/* 单元格 */
+.grid .cell,.grid>table>thead>tr>td,.grid>table>tbody>tr>td{
+	position: relative;
+	padding: 0 0.25em 0 0.25em;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	empty-cells: show;
+}
+
+/* 列宽改变器 */
+.grid .resizer{
+	position: absolute;
+	cursor: default;
+}
+.grid .resizer.left,.grid .resizer.right{
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	cursor: col-resize;
+}
+.grid .resizer.left{
+	left: 0;
+	right: auto;
+}
+.grid .resizer.right{ 
+	left: auto;
+	right: 0;
+}
+.grid .resizer.top,.grid .resizer.bottom{
+	left: 0;
+	right: 0;
+	height: 4px;
+	cursor: row-resize;
+}
+.grid .resizer.top{
+	top: 0;
+	bottom: auto;
+}
+.grid .resizer.bottom{
+	top: auto;
+	bottom: 0;
+}
+.grid .resizer.total{
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.grid .resizer:hover{
+	background-color: #AAB;
+}
+
+/*滚动条*/
+.grid .scroller{
+	position: absolute;
+	background-color: #F8F8F8;
+}
+.grid .scroller.vertical{
+	top: 0;
+	right: 0;
+	bottom: 10px;
+	width: 10px;
+	border-left: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+.grid .scroller.horizontal{
+	left: 0;
+	right: 10px;
+	bottom: 0;
+	height: 10px;
+	border-top: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+}

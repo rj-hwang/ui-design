@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Grid</title>
+  <link rel="stylesheet" media="screen" href="./grid.css">
+</head>
+<body>
+<div class="left">
+	<h2>表格设计:</h2>
+	<div class="grid" style="height:300px;width:450px;">
+		<table cellpadding="0">
+			<colgroup>
+				<col class="column first">
+				<col style="width: 80px;">
+				<col style="width: 100px;">
+				<col style="width: 120px;">
+			</colgroup>
+			<thead>
+				<tr class="row nowrap align center middle">
+					<th><div class="resizer total"></div></th>
+					<td>ABC<div class="resizer right"></div></td>
+					<td>Web 标准，改变你的网页设计方式。<div class="resizer right"></div></td>
+					<td>标题C<div class="resizer right"></div></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="nowrap align left">
+					<th>1<div class="resizer bottom"></div></th>
+					<td>内容A</td>
+					<td>Web 标准，改变你的网页设计方式。</td>
+					<td>内容C</td>
+				</tr>
+				<tr class="nowrap align left">
+					<th>2<div class="resizer bottom"></div></th>
+					<td>内容A</td>
+					<td>内容B<br>强制第二行</td>
+					<td>内容C</td>
+				</tr>
+				<tr class="nowrap align left">
+					<th>10<div class="resizer bottom"></div></th>
+					<td>123</td>
+					<td>You are so beautiful.</td>
+					<td>abc</td>
+				</tr>
+				<tr class="nowrap align left">
+					<th>20<div class="resizer bottom"></div></th>
+					<td>内容A</td>
+					<td>内容B</td>
+					<td>内容C</td>
+				</tr>
+				<tr class="nowrap align left">
+					<th>88<div class="resizer bottom"></div></th>
+					<td>内容A</td>
+					<td>内容B</td>
+					<td>内容C</td>
+				</tr>
+				<tr class="nowrap align left">
+					<th>100<div class="resizer bottom"></div></th>
+					<td>内容A</td>
+					<td>内容B</td>
+					<td>内容C</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="scroller vertical"></div>
+		<div class="scroller horizontal"></div>
+	</div>
+
+</div>
+<div class="right">
+	<h2>1 标题行设置:</h2>
+	<p>
+		<label><input type="radio" value="0" name="configHeaderWrap" checked>禁止文本自动换行，溢出显示省略号</label><br>
+		<label><input type="radio" value="1" name="configHeaderWrap">文本自动换行</label>
+	</p>
+	<h3>1.1 标题行-水平对齐方式:</h3>
+	<p>
+		<label><input type="radio" value="left" name="configHeaderCellHAlign">左对齐</label>
+		<label><input type="radio" value="center" name="configHeaderCellHAlign" checked>居中</label>
+		<label><input type="radio" value="right" name="configHeaderCellHAlign">右对齐</label>
+		<label><input type="radio" value="justify" name="configHeaderCellHAlign">两端对齐</label>
+	</p>
+	<h3>1.2 标题行-垂直对齐方式:</h3>
+	<p>
+		<label><input type="radio" value="top" name="configHeaderCellVAlign">上</label>
+		<label><input type="radio" value="middle" name="configHeaderCellVAlign" checked>中</label>
+		<label><input type="radio" value="bottom" name="configHeaderCellVAlign">下</label>
+	</p>
+
+	<h2>2 数据行设置:</h2>
+	<p>
+		<label><input type="radio" value="0" name="configCellWrap" checked>禁止文本自动换行，溢出显示省略号</label><br>
+		<label><input type="radio" value="1" name="configCellWrap">文本自动换行</label>
+	</p>
+	<h3>2.1 数据行-水平对齐方式:</h3>
+	<p>
+		<label><input type="radio" value="left" name="configCellHAlign" checked>左对齐</label>
+		<label><input type="radio" value="center" name="configCellHAlign">居中</label>
+		<label><input type="radio" value="right" name="configCellHAlign">右对齐</label>
+		<label><input type="radio" value="justify" name="configCellHAlign">两端对齐</label>
+	</p>
+	<h3>2.2 数据行-垂直对齐方式:</h3>
+	<p>
+		<label><input type="radio" value="top" name="configCellVAlign">上</label>
+		<label><input type="radio" value="middle" name="configCellVAlign" checked>中</label>
+		<label><input type="radio" value="bottom" name="configCellVAlign">下</label>
+	</p>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="./grid.js"></script>
+</body>
+</html>
