@@ -3,11 +3,12 @@ html {
 }
 body {
 	font-family: "Microsoft YaHei";
-	font-size: 16px;
+	font-size: 16px/1.8;
 	line-height: 1.5;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	color: #666;
 }
 
 /* 页面整体布局 */
@@ -19,44 +20,44 @@ body>div {
 body>div.left {
 	width: 50%;
 	left: 0;
+	padding: 1em;
 }
 body>div.right {
 	width: 50%;
 	right: 0;
 	background-color: #F5F5F5;
 	border-left: 1px solid #E5E5EE;
+	padding: 1em;
 }
 
 /* Grid*/
 .grid{
 	position: relative;
 	overflow: hidden;
+	border: 1px solid #CCC;
 }
 .grid .rowHeader{
 	width: 50px;
 }
 .grid>table>colgroup>col{
-	box-sizing: content-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .grid>table{
-	position: relative;
 	table-layout: fixed;
-	border-collapse: collapse;
-	border-spacing: 0;
-	-khtml-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
-	margin: 0;
-	border-width: 0;
 	width: 0;
 	outline-width: 0;
 	max-width: none;
 	max-height: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	margin: 0;
+	border-width: 0;
 	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .grid>table>thead>tr>th,.grid>table>tbody>tr>th,.grid>table>tbody>tr>td{
@@ -68,7 +69,7 @@ body>div.right {
 	text-align: center;
 	font-weight: normal;
 }
-/* 单元格的内容容器 */
+/* 单元格内容容器 */
 .grid>table>thead>tr>th>div,.grid>table>tbody>tr>th>div,.grid>table>tbody>tr>td>div{
 	height: 100%;
 	position: relative;
@@ -76,13 +77,28 @@ body>div.right {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	padding: 0 4px 0 4px;
+	vertical-align: middle;
 }
+/* 文本溢出显示省略号 */
+.grid .nowrap{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* 文本溢出自动换行 */
+.grid .wrap, .grid .wrap *{
+	white-space: normal;
+	overflow: auto;
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+/* 首行、首列 */
 .grid>table>thead>tr>th,.grid>table>tbody>tr>th{
 	background-color: #EEE;
 }
 
-/*移动列宽的指引*/
-.grid>table>thead>tr>th>.resizer{
+/* 列宽改变器 */
+.grid>table>thead>tr>th>div>.resizer{
 	position: absolute;
 	width: 4px;
 	cursor: col-resize;
@@ -90,7 +106,14 @@ body>div.right {
 	top: 0;
 	right: 0;
 }
-.grid>table>thead>tr>th>.resizer:hover{
+.grid>table>thead>tr>th>div>.resizer.left{
+	left: 0;
+	right: auto;
+}
+.grid>table>thead>tr>th>div>.resizer.right{
+	right: 0;
+}
+.grid>table>thead>tr>th>div>.resizer:hover{
 	background-color: #AAB;
 }
 

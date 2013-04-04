@@ -7,7 +7,8 @@
 </head>
 <body>
 <div class="left">
-	<div class="grid" style="margin:10px;border: 1px solid blue;height:150px;width:450px;">
+	<h2>表格设计:</h2>
+	<div class="grid" style="height:150px;width:450px;">
 		<table cellpadding="0">
 			<colgroup>
 				<col class="rowHeader">
@@ -19,46 +20,46 @@
 				<tr>
 					<th></th>
 					<th><div>A<div class="resizer"></div></div></th>
-					<th><div style="width:50px;">AAA BBB CCC DDD<div class="resizer"></div></div></th>
-					<th><div>C</div></th>
+					<th><div><div class="resizer left"></div>AAA 长标题长标题 CCC DDD<div class="resizer right"></div></div></th>
+					<th><div><div class="resizer left"></div>C</div></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<th>1</th>
-					<td>内容A</td>
-					<td>长内容B长内容长内容长内容长内容</td>
-					<td>内容C</td>
+					<td><div>内容A</div></td>
+					<td><div>长内容B长内容长内容长内容长内容</div></td>
+					<td><div>内容C</div></td>
 				</tr>
 				<tr>
-					<th>2</th>
-					<td>内容<br>应换行</td>
-					<td>内容B</td>
-					<td>内容C</td>
+					<th>1</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B<br>第二行</div></td>
+					<td><div>内容C</div></td>
 				</tr>
 				<tr>
-					<th>3</th>
+					<th>1</th>
 					<td><div>内容A</div></td>
 					<td><div>内容B</div></td>
 					<td><div>内容C</div></td>
 				</tr>
 				<tr>
-					<th>4</th>
-					<td>内容A</td>
-					<td>内容B</td>
-					<td>内容C</td>
+					<th>1</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
 				</tr>
 				<tr>
-					<th>5</th>
-					<td>内容A</td>
-					<td>内容B</td>
-					<td>内容C</td>
+					<th>1</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
 				</tr>
 				<tr>
-					<th>6</th>
-					<td>内容A</td>
-					<td>内容B</td>
-					<td>内容C</td>
+					<th>1</th>
+					<td><div>内容A</div></td>
+					<td><div>内容B</div></td>
+					<td><div>内容C</div></td>
 				</tr>
 			</tbody>
 		</table>
@@ -67,10 +68,17 @@
 	</div>
 
 </div>
-<div class="right">页面整体布局
+<div class="right">
+	<div style="width:300px; line-height:25px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;">Web标准：改变您的网页制作思维方式 节省代码及结构与表现分离</div>
+	<h2>标题行设置:</h2>
+	<p>
+		<label><input type="radio" value="0" name="configHeaderWrap" checked>标题溢出显示省略号</label>
+		<label><input type="radio" value="1" name="configHeaderWrap">标题溢出自动换行</label>
+	</p>
 </div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="./grid.js"></script>
 <script type="text/template" id="grid-template">
 	<div class="grid">
 		<table>
