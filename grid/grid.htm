@@ -17,11 +17,21 @@
 				<col style="width: 120px;">
 			</colgroup>
 			<thead>
-				<tr>
+				<tr class＝"row halign-center">
 					<th></th>
-					<th><div>A<div class="resizer"></div></div></th>
-					<th><div><div class="resizer left"></div>AAA 长标题长标题 CCC DDD<div class="resizer right"></div></div></th>
-					<th><div><div class="resizer left"></div>C</div></th>
+					<th>
+						<div class="relative" style="width:100%;height:100%;">AA
+							<div class="resizer left"></div><div class="resizer right"></div>
+						</div>
+					</th>
+					<th><table cellpadding="0" class="relative"><tbody><tr><td class＝"content halign-center">
+						<div class="resizer left"></div>长标题B 长标题B 长标题B<div class="resizer right"></div>
+						</td></tr></tbody></table>
+					</th>
+					<th><table cellpadding="0" class="relative"><tbody><tr><td class＝"content halign-center">
+						<div class="resizer left"></div>标题C<div class="resizer right"></div>
+						</td></tr></tbody></table>
+					</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -75,9 +85,22 @@
 		<label><input type="radio" value="0" name="configHeaderWrap" checked>标题溢出显示省略号</label>
 		<label><input type="radio" value="1" name="configHeaderWrap">标题溢出自动换行</label>
 	</p>
+	<h3>标题行单元格水平对齐方式:</h3>
+	<p>
+		<label><input type="radio" value="halign-left" name="configHeaderCellHAlign">左对齐</label>
+		<label><input type="radio" value="halign-center" name="configHeaderCellHAlign" checked>居中</label>
+		<label><input type="radio" value="halign-right" name="configHeaderCellHAlign">右对齐</label>
+		<label><input type="radio" value="halign-justify" name="configHeaderCellHAlign">两端对齐</label>
+	</p>
+	<h3>标题行单元格垂直对齐方式:</h3>
+	<p>
+		<label><input type="radio" value="valign-top" name="configHeaderCellVAlign">上</label>
+		<label><input type="radio" value="valign-middle" name="configHeaderCellVAlign" checked>中</label>
+		<label><input type="radio" value="valign-bottom" name="configHeaderCellVAlign">下</label>
+	</p>
 </div>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="./grid.js"></script>
 <script type="text/template" id="grid-template">
 	<div class="grid">
