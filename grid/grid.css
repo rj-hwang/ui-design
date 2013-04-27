@@ -172,16 +172,20 @@ h2,h3,p {
 .grid .scroller.vertical{
 	top: 0;
 	right: 0;
-	bottom: 10px;
-	width: 10px;
+	bottom: 18px;
+	width: 19px;
 	border-left: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 .grid .scroller.horizontal{
 	left: 0;
-	right: 10px;
+	right: 18px;
 	bottom: 0;
-	height: 10px;
+	height: 19px;
 	border-top: 1px solid #DDD;
 	border-right: 1px solid #DDD;
+	overflow-x: auto;
+	overflow-y: hidden;
 }

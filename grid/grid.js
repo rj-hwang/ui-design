@@ -76,4 +76,10 @@
 			}
 		}
 	});
+
+	// 鼠标滚动事件
+	$g.on("mousewheel",function(e, delta){
+		console.log(delta);
+		console.log(e);
+	});
 })(jQuery);
