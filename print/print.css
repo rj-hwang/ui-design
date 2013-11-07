@@ -1,0 +1,42 @@
+html {
+	height: 100%;
+}
+body {
+	font-family: "Microsoft YaHei";
+	font-size: 80px;
+	line-height: 1.5;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #666;
+}
+
+.page {
+	background-color: #fff;
+	margin: 2mm auto 2mm auto;
+	width: 175mm;
+}
+
+.row.breakAfter {
+	font-weight: bold;
+	color: green;
+	background-color: #888;
+	border-bottom: 1px solid #000;
+	position: relative;
+}
+
+
+@media print {
+	/* 在此元素后增加分页符 */
+	.row.breakAfter {
+		/*http://www.w3school.com.cn/css/pr_print_page-break-after.asp*/
+		page-break-after:always;
+		page-break-inside: avoid;
+	}
+	/* 在此元素前增加分页符 */
+	.row.breakBefore {
+		/*http://www.w3school.com.cn/css/pr_print_page-break-before.asp*/
+		page-break-before:always;
+		page-break-inside: avoid;
+	}
+}
